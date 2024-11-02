@@ -74,7 +74,11 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
+<<<<<<< HEAD
   height: auto;
+=======
+  height: 42px;
+>>>>>>> e146e6b4c9e431d055b4de6ad1d97848935aefa0
   width: 100%;
   border: 1px solid #cbd5e1;
   border-radius: 12px;
@@ -108,7 +112,11 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 1.4px;
+<<<<<<< HEAD
   margin-bottom: 3px;
+=======
+  margin-bottom: 0px;
+>>>>>>> e146e6b4c9e431d055b4de6ad1d97848935aefa0
 }
 .input {
   color: #1e293b;
@@ -123,6 +131,7 @@
   margin-bottom: 10px;
   min-width: 157px;
 }
+<<<<<<< HEAD
 .input-name-type {
   color: #7e858e;
   font-family: 'Roboto';
@@ -132,6 +141,9 @@
   margin-bottom: 3px;
 }
 .sub-button {
+=======
+.button {
+>>>>>>> e146e6b4c9e431d055b4de6ad1d97848935aefa0
   background-color: #0b69ff;
   color: #ffffff;
   font-family: 'Roboto';
@@ -148,8 +160,12 @@
   cursor: pointer;
   margin-bottom: 10px;
 }
+<<<<<<< HEAD
 
 .history-transactions {
+=======
+.history-transactions{
+>>>>>>> e146e6b4c9e431d055b4de6ad1d97848935aefa0
   width: 100%;
   min-height: 326px;
   border: 1px solid #cbd5e1;
@@ -160,8 +176,13 @@
   padding-right: 24px;
   margin-top: 32px;
 }
+<<<<<<< HEAD
 @media screen and (min-width: 768px) {
   .history-transactions {
+=======
+@media screen and (min-width: 768px){
+  .history-transactions{
+>>>>>>> e146e6b4c9e431d055b4de6ad1d97848935aefa0
     width: 55%;
     min-height: 424px;
     padding-top: 24px;
@@ -172,6 +193,7 @@
     margin-left: 32px;
   }
 }
+<<<<<<< HEAD
 .transactions-table-container {
   height: auto;
   border: #cbd5e1 solid 1px;
@@ -205,6 +227,42 @@
 }
 @media screen and (min-width: 768px) {
   .table-header-cell {
+=======
+.transactions-table-container{
+  height: 100%;
+  border-radius: 8px;
+}
+.transaction-table{
+  padding-left: 0;
+  margin: 0px;
+}
+.table-header{
+  display: flex;
+  justify-self: flex-start;
+  align-items: center;
+  height: 48px;
+  list-style-type: none;
+  border: 1px solid #cbd5e1;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media screen and (min-width: 768px){
+  .table-header{
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+.table-header-cell{
+  color: #334155;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 500;
+  width: 30%;
+  border-right: none;
+}
+@media screen and (min-width: 768px){
+  .table-header-cell{
+>>>>>>> e146e6b4c9e431d055b4de6ad1d97848935aefa0
     font-size: 16px;
   }
 }

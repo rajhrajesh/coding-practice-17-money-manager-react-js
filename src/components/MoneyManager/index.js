@@ -1,10 +1,17 @@
 import {Component} from 'react'
 import {v4 as uuidv4} from 'uuid'
+<<<<<<< HEAD
 import './index.css'
+=======
+>>>>>>> e146e6b4c9e431d055b4de6ad1d97848935aefa0
 
 import MoneyDetails from '../MoneyDetails'
 import TransactionItem from '../TransactionItem'
 
+<<<<<<< HEAD
+=======
+import './index.css'
+>>>>>>> e146e6b4c9e431d055b4de6ad1d97848935aefa0
 const transactionTypeOptions = [
   {
     optionId: 'INCOME',
@@ -27,9 +34,14 @@ class MoneyManager extends Component {
   deleteTransaction = id => {
     const {transactionList} = this.state
     const updatedTransactionList = transactionList.filter(
+<<<<<<< HEAD
       eachTransaction => id !== eachTransaction.id,
     )
 
+=======
+      eachTransc => id !== eachTransc.id,
+    )
+>>>>>>> e146e6b4c9e431d055b4de6ad1d97848935aefa0
     this.setState({
       transactionList: updatedTransactionList,
     })
@@ -51,7 +63,11 @@ class MoneyManager extends Component {
     event.preventDefault()
     const {titleInput, amountInput, optionId} = this.state
     const typeOption = transactionTypeOptions.find(
+<<<<<<< HEAD
       eachTransaction => eachTransaction.optionId === optionId,
+=======
+      eachTransc => eachTransc.optionId === optionId,
+>>>>>>> e146e6b4c9e431d055b4de6ad1d97848935aefa0
     )
 
     const {displayText} = typeOption
@@ -73,9 +89,15 @@ class MoneyManager extends Component {
     const {transactionList} = this.state
     let expensesAmount = 0
 
+<<<<<<< HEAD
     transactionList.forEach(eachTransaction => {
       if (eachTransaction.type === transactionTypeOptions[1].displayText) {
         expensesAmount += eachTransaction.amount
+=======
+    transactionList.forEach(eachTransc => {
+      if (eachTransc.type === transactionTypeOptions[1].displayText) {
+        expensesAmount += eachTransc.amount
+>>>>>>> e146e6b4c9e431d055b4de6ad1d97848935aefa0
       }
     })
     return expensesAmount
@@ -84,10 +106,16 @@ class MoneyManager extends Component {
   getIncome = () => {
     const {transactionList} = this.state
     let incomeAmount = 0
+<<<<<<< HEAD
 
     transactionList.forEach(eachTransaction => {
       if (eachTransaction.type === transactionTypeOptions[0].displayText) {
         incomeAmount += eachTransaction.amount
+=======
+    transactionList.forEach(eachTransc => {
+      if (eachTransc.type === transactionTypeOptions[0].displayText) {
+        incomeAmount += eachTransc.amount
+>>>>>>> e146e6b4c9e431d055b4de6ad1d97848935aefa0
       }
     })
     return incomeAmount
@@ -98,12 +126,20 @@ class MoneyManager extends Component {
     let balanceAmount = 0
     let incomeAmount = 0
     let expensesAmount = 0
+<<<<<<< HEAD
 
     transactionList.forEach(eachTransaction => {
       if (eachTransaction.type === transactionTypeOptions[0].displayText) {
         incomeAmount += eachTransaction.amount
       } else {
         expensesAmount += eachTransaction.amount
+=======
+    transactionList.forEach(eachTransc => {
+      if (eachTransc.type === transactionTypeOptions[0].displayText) {
+        incomeAmount += eachTransc.amount
+      } else {
+        expensesAmount += eachTransc.amount
+>>>>>>> e146e6b4c9e431d055b4de6ad1d97848935aefa0
       }
     })
     balanceAmount = incomeAmount - expensesAmount
@@ -132,7 +168,11 @@ class MoneyManager extends Component {
             expensesAmount={expensesAmount}
           />
           <div className="transaction-details">
+<<<<<<< HEAD
             <form className="transaction-form" onSubmit={this.onAddTransaction}>
+=======
+            <form className="transaction-from" onSubmit={this.onAddTransaction}>
+>>>>>>> e146e6b4c9e431d055b4de6ad1d97848935aefa0
               <h1 className="transaction-header">Add Transaction</h1>
               <label className="input-label" htmlFor="title">
                 TITLE
@@ -156,7 +196,11 @@ class MoneyManager extends Component {
                 id="amount"
                 onChange={this.onChangeAmountInput}
               />
+<<<<<<< HEAD
               <label className="input-name-type" htmlFor="select">
+=======
+              <label className="label" htmlFor="select">
+>>>>>>> e146e6b4c9e431d055b4de6ad1d97848935aefa0
                 TYPE
               </label>
               <select
@@ -165,6 +209,7 @@ class MoneyManager extends Component {
                 value={optionId}
                 onChange={this.onChangeOptionId}
               >
+<<<<<<< HEAD
                 {transactionTypeOptions.map(eachTransaction => (
                   <option
                     key={eachTransaction.optionId}
@@ -175,6 +220,15 @@ class MoneyManager extends Component {
                 ))}
               </select>
               <button className="sub-button" type="submit">
+=======
+                {transactionTypeOptions.map(eachTransc => (
+                  <option key={eachTransc.optionId} value={eachTransc.optionId}>
+                    {eachTransc.displayText}
+                  </option>
+                ))}
+              </select>
+              <button className="button" type="submit">
+>>>>>>> e146e6b4c9e431d055b4de6ad1d97848935aefa0
                 Add
               </button>
             </form>
@@ -182,15 +236,26 @@ class MoneyManager extends Component {
               <h1 className="transaction-header">History</h1>
               <div className="transactions-table-container">
                 <ul className="transactions-table">
+<<<<<<< HEAD
                   <li className="table-header-row">
+=======
+                  <li className="table-header">
+>>>>>>> e146e6b4c9e431d055b4de6ad1d97848935aefa0
                     <p className="table-header-cell">Title</p>
                     <p className="table-header-cell">Amount</p>
                     <p className="table-header-cell">Type</p>
                   </li>
+<<<<<<< HEAD
                   {transactionList.map(eachTransaction => (
                     <TransactionItem
                       key={eachTransaction.id}
                       transactionDetails={eachTransaction}
+=======
+                  {transactionList.map(eachTransc => (
+                    <TransactionItem
+                      key={eachTransc.id}
+                      transactionDetails={eachTransc}
+>>>>>>> e146e6b4c9e431d055b4de6ad1d97848935aefa0
                       deleteTransaction={this.deleteTransaction}
                     />
                   ))}
@@ -203,5 +268,8 @@ class MoneyManager extends Component {
     )
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> e146e6b4c9e431d055b4de6ad1d97848935aefa0
 export default MoneyManager
